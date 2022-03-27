@@ -21,6 +21,7 @@
   так же нельзя (!) вставлять например Х1 внутрь ДИВа*/
 }
 .header__title {
+  margin: 0;
   font-size: 102px;
   align-self:  center;
   font-weight: bold;
@@ -31,7 +32,7 @@
   padding-left: 64px; /* вместо марджин нужно использовать паддинг*/
 }
 
-.logo__header {
+.logo_place_header {
   margin: 0 auto;
   position: absolute;
   top: 30px;
@@ -62,17 +63,20 @@
    position: absolute;
    background-color: #2f80ed;
    align-self: flex-start;
-   margin-top: 64px;
+   top: 64px;
    right: 0;
 }
 .header__subtitle {
+  margin: 0;
+  line-height: 25px;
+  font-size: 18px;
   width: 388px;
   position: absolute;
-  margin-left: 64px;
-  margin-bottom: 30px;
+  left: 64px;
+  bottom: 30px;
   text-align: left;
   align-self: flex-end; /*ас помощью этого приема мы сделали текст в нижней части оси!!! */
-  z-index: 1;
+  z-index: 2;
 }
 .header__link {
   color: #2f80ed;
@@ -99,18 +103,17 @@
   min-width: 784px;
   display: flex;
   position: relative;
- /* justify-content: center; */
+  justify-content: space-between;
 }
 .two-columns__brief {
   margin: 0 auto;
   width: 175px;
   vertical-align: top;
   text-align:start;
-  margin-right: 90px;
   color: #2f80ed;
   font-size: 18px;
   line-height: 1.2;
-  font-weight: 300px;
+  font-weight: 400px; /* change */
 }
 .two-columns__brief_text{
   margin-top: 0px;
@@ -128,25 +131,26 @@
 .two-columns__span-accent {
   font-weight: bold;
 }
-.paragraph_one-three {
-  margin-top: 0px;
-  margin-bottom: 0px;
-line-height: 34px;
-font-size: 24px;
-}
-.paragraph_two {
-line-height: 34px;
-font-size: 24px;
-}
+
 .two-columns__paragraph {
+  line-height: 34px;
+  font-size: 24px;
 }
+.two-columns__paragraph:first-child {
+  margin: 0 auto;
+}
+.two-columns__paragraph:last-child {
+  margin: 0 auto;
+}
+
+
 .digits {
   margin-bottom: 0px;
 }
 .section-title {
   line-height: 1.15;
   font-size: 60px;
-  font-weight: 500;
+  font-weight: 700; /* change */
   margin-bottom: 20px;
   text-align: center;
   margin-left: 20%;
@@ -164,7 +168,7 @@ font-size: 24px;
   text-align: center;
 
 }
-.section__table {
+.table {
   display:flex;
   flex-direction: row;
   flex-wrap: wrap; /* благодаря этой строчке мы сделали так, чтобы блоки шли постепенно перемещаясь на другую строку, змейкой вниз*/
@@ -179,19 +183,22 @@ font-size: 24px;
   margin-top: 60px;
   width: 250px; /*  благодаря этому свойству мы определили, что в одной линии может быть не более четырех блоков, так как ширина контейнера 1100 пикселей */
 }
-.table__cell-heading {
+.table__heading {
+  margin: 0;
 line-height: 1.15;
 font-size: 24px;
-font-weight: 500;
+font-weight: 700;
 margin-bottom: 20px;
 }
-.table__cell-text {
+.table__text {
+margin: 0;
 margin-top: 0px;
 line-height: 1.2;
 font-size: 18px;
 font-weight: normal;
 }
-.table__cell-text-bank {
+.table__text_bank {
+  margin: 0;
   margin-top: 20px;
   line-height: 1.2;
 font-size: 18px;
@@ -201,11 +208,14 @@ font-weight: normal;
   padding: 0 auto;
   margin: 0 auto;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-image: url(../images/feynman.png); /* вместо отдельного тега имаж мы влепили фон в блок*/
   background-position: bottom left; /*расположили фоновое иображение в нижнем левом углу */
   background-repeat: no-repeat;
   background-size: 867px 637px; /* таким образом мы задаем ширину 867 а высоту 637*/
-  height: 890px;
+  min-height: 890px;
   background-color: #f2f2f2;
 }
 .link {
@@ -222,9 +232,9 @@ font-weight: normal;
     color: #2f80ed;
   }
 .feynman__title {
-  left: 50%;
-  transform: translateX(-50%); /* эти две строки кода расположили блок по центру родителя */
-  position: absolute;
+  margin: 0;
+  margin-top: 100px;
+  margin-bottom: 70px;
   text-align: center;
   width: 648px;
   line-height: 1.15;
@@ -232,43 +242,39 @@ font-weight: normal;
   font-weight: bold;
 }
 .feynman__subtitle {
-position: absolute;
+margin: 0;
 text-align: center;
 line-height: 53px;
-margin:auto;
-top: 50%;
-left: 50%;
-transform: translateX(-50%);
 font-size: 36px;
 font-weight: normal;
 }
 .kaufman {
   overflow: hidden;
   position: relative;
-  margin: 0;
   background-color: #1f1f1f;
 }
-.section-title_dark_theme {
+.section-title_theme_dark {
   color: white;
 }
-.section-subtitle_dark_theme {
+.section-subtitle_theme_dark {
   color: white;
 }
-.section__table_dark_theme {
+.table_theme_dark {
   color: white;
 }
-.table__cell_dark_theme {
+.table__cell_theme_dark {
   width: 200px;
   z-index: 1;
 }
 .kaufman__triangle {
-  margin: 0 auto;
-  width: 877px;
-  height: 877px;
+  background-image: url(../images/kaufman-triangle.svg);
+  background-size: cover;
+  margin: 0;
   position: absolute;
   right: -210px;
-  top: 0px;
-z-index: 0;
+  width: 877px;
+  height: 877px;
+  z-index: 0;
 }
 .footer {
   box-sizing: border-box;
@@ -279,29 +285,29 @@ z-index: 0;
   color: white;
 }
 .footer__columns {
+  margin: 0px;
   top: 60px;
   bottom: 40px;
-  margin: 0 auto;
   position: relative;
   display: flex;
   flex-direction: row;
   justify-content:  space-between; /*благодаря ДЖАСТИФАЙ КОНТЕНТ А НЕ ЭЛАЙН СЕЛФ спэйс бетвин мы задали расстояние одинаковое между блоками */
   margin-left: 5%;
   margin-right: 5%;
-
 }
-.footer__column_copyright {
-  display: flexbox;
-  flex-direction: column;
-  align-self: flex-end;
-  width: 50%;
+.footer__column_content-copyright {
+  margin: 0px;
   flex-basis: 711px;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.footer__column_info {
-display: inline-flex;
+
+.footer__column_content-info {
+display: flex;
 flex-direction: column;
 }
-.footer__column_social {
+.footer__column_content-social {
   display: inline-flex;
   flex-direction: column;
 }
@@ -310,21 +316,17 @@ flex-direction: column;
   margin-bottom: 60%;
   display: flex;
   flex-direction: column;
-
-}
-.logo__header_footer {
- margin: 0 auto;
 }
 .footer__author {
-  margin: 0 auto;
+  margin: 0;
+  margin-top: 18px;
   margin-bottom: 18px;
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
+  display: flex;
 }
-.footer__author_name {
-  margin: 0 auto;
-}
+
 .footer__column-heading {
   margin-top: 0px;
   margin-bottom: 20px;
@@ -333,11 +335,19 @@ font-size: 18px;
 font-weight: bold;
 }
 .footer__column-link {
+color: white;
 line-height: 30px;
 font-size: 18px;
 font-weight: normal;
 }
-.social-icon {
+.footer__icon {
   size: 16px 16px;
   margin-right: 10px;
+}
+.logo_place_footer {
+  margin: 0px;
+  width: 228px;
+  height: 32px;
+  background-image: url(../images/logo_place_footer.svg);
+  background-repeat: no-repeat;
 }
