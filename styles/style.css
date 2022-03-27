@@ -262,7 +262,7 @@ font-weight: normal;
 .table_theme_dark {
   color: white;
 }
-.table__cell_theme_dark {
+.table__cell_theme-dark {
   width: 200px;
   z-index: 1;
 }
@@ -350,4 +350,5 @@ font-weight: normal;
   height: 32px;
   background-image: url(../images/logo_place_footer.svg);
   background-repeat: no-repeat;
+  color: white
 }
