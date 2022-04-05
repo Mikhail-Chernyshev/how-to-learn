@@ -1,0 +1,14 @@
+.header {
+    color: black;
+    overflow: hidden;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 756px;
+    background-color: #f2f2f2;
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* с помощью этой команды мы выровняли элементы внутри блока по горизонтальной оси*/
+    justify-content: flex-start;
+    /*с помощью этой команды мы выровняли основной текст слева направо */
+}

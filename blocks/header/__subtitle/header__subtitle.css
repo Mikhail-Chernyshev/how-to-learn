@@ -1,0 +1,13 @@
+.header__subtitle {
+    margin: 0;
+    line-height: 25px;
+    font-size: 18px;
+    width: 388px;
+    position: absolute;
+    left: 64px;
+    bottom: 30px;
+    text-align: left;
+    align-self: flex-end;
+    /*ас помощью этого приема мы сделали текст в нижней части оси!!! */
+    z-index: 2;
+}

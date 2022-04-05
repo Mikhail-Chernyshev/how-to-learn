@@ -47,15 +47,18 @@
     /* вместо марджин нужно использовать паддинг*/
 }
 
+.logo {
+    margin: 0;
+    width: 228px;
+    height: 32px;
+}
+
 .logo_place_header {
-    margin: 0 auto;
     position: absolute;
     top: 30px;
     left: 64px;
-    width: 183px;
-    height: 32px;
     background-image: url(../images/logo_place_header.svg);
-    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 .header__main-illustration {
@@ -69,7 +72,6 @@
     background-repeat: no-repeat;
     z-index: 1;
     background-size: cover;
-    /* ЭТИМ ЗНАЧЕНИЕМ МЫ РЕШИЛИ ПРОБЛЕМУ МАСШТАБА ИЗОБРАЖЕНИЯ ФОНА НАХУЙ!!! */
 }
 
 
@@ -104,7 +106,13 @@
 }
 
 .header__link {
+    text-decoration: none;
     color: #2f80ed;
+}
+
+.header__link:hover {
+    opacity: 0.3;
+    transition: .3s;
 }
 
 .description {
@@ -134,11 +142,6 @@
     font-size: 18px;
     line-height: 1.2;
     font-weight: 400;
-    /* change */
-}
-
-.two-columns__brief_text {
-    margin-top: 0px;
 }
 
 .two-columns__main-text {
@@ -260,10 +263,6 @@
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
-}
-
-.digits {
-    margin-bottom: 0px;
 }
 
 .section-title {
@@ -391,6 +390,12 @@
     font-size: 30px;
     font-weight: 400;
     color: #2f80ed;
+    text-decoration: none;
+}
+
+.khan__buy-link:hover {
+    opacity: 0.3;
+    transition: .3s;
 }
 
 .feynman {
@@ -411,15 +416,6 @@
     background-color: #f2f2f2;
 }
 
-.link {
-    text-decoration: none;
-}
-
-.link:hover {
-    opacity: 0.3;
-    transition: .3s;
-}
-
 .feynman__link {
     margin: auto;
     line-height: 51px;
@@ -430,6 +426,12 @@
     top: 50%;
     /*таким приемом мы указали высоту элемента на середине высоты родителя */
     color: #2f80ed;
+    text-decoration: none;
+}
+
+.feynman__link:hover {
+    opacity: 0.3;
+    transition: .3s;
 }
 
 .feynman__title {
@@ -494,7 +496,9 @@
     animation-timing-function: linear;
 }
 
-.resources {}
+.resources {
+    margin: 0;
+}
 
 .resources__logo-zone {
     padding: 80px 0 217px;
@@ -512,6 +516,11 @@
     width: 270px;
     height: 38px;
     text-align: center;
+}
+
+.resources__link:hover {
+    opacity: 0.3;
+    transition: .3s;
 }
 
 .resources__logo {
@@ -541,21 +550,22 @@
     /*благодаря ДЖАСТИФАЙ КОНТЕНТ А НЕ ЭЛАЙН СЕЛФ спэйс бетвин мы задали расстояние одинаковое между блоками */
 }
 
+.footer__column {
+    display: flex;
+}
+
 .footer__column_content_copyright {
     margin: 0px;
     flex-basis: 711px;
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .footer__column_content_info {
-    display: flex;
     flex-direction: column;
 }
 
 .footer__column_content_social {
-    display: inline-flex;
     flex-direction: column;
 }
 
@@ -586,6 +596,12 @@
     line-height: 30px;
     font-size: 18px;
     font-weight: normal;
+    text-decoration: none;
+}
+
+.footer__column-link:hover {
+    opacity: 0.3;
+    transition: .3s;
 }
 
 .footer__column-link:last-child {
@@ -598,9 +614,6 @@
 }
 
 .logo_place_footer {
-    margin: 0px;
-    width: 228px;
-    height: 32px;
     background-image: url(../images/logo_place_footer.svg);
     background-repeat: no-repeat;
 }

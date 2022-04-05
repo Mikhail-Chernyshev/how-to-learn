@@ -1,0 +1,17 @@
+.feynman {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../../images/feynman.png);
+    /* вместо отдельного тега имаж мы влепили фон в блок*/
+    background-position: bottom left;
+    /*расположили фоновое иображение в нижнем левом углу */
+    background-repeat: no-repeat;
+    background-size: 867px 637px;
+    /* таким образом мы задаем ширину 867 а высоту 637*/
+    min-height: 890px;
+    background-color: #f2f2f2;
+}
