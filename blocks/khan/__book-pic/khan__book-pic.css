@@ -1,4 +1,5 @@
 .khan__book-pic {
+    object-position: top;
     object-fit: cover;
     /*чтобы изображение имажа не пыталось влезть полностью, а строго по заданным параметрам блока */
     width: 620px;

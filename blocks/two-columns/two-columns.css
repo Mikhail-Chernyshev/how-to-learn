@@ -6,3 +6,7 @@
     position: relative;
     justify-content: space-between;
 }
+
+.two-columns:last-child {
+    margin-top: 160px;
+}

@@ -1,5 +1,5 @@
 .video {
     display: flex;
     flex-direction: column;
-    height: 530px;
+    margin-bottom: -50px;
 }
